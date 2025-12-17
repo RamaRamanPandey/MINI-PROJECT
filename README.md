@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# VR Physics Lab: Leakage of Condenser
 
-# Run and deploy your AI Studio app
+An interactive Virtual Reality physics laboratory for undergraduate Engineering Physics students to measure high resistance using the method of leakage of a condenser.
 
-This contains everything you need to run your app locally.
+## Experiment Overview
+The simulation provides a 3D immersive environment where students can:
+1. Charge a capacitor (Condenser) using Key K1.
+2. Leak the charge through a high resistance using Key K2.
+3. Observe deflection in a ballistic galvanometer.
+4. Calculate the unknown resistance using the leakage formula.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ntXuuI7DoO-u0wJmJs_ubTHsAJhytZdQ
+## Features
+- **3D Workspace**: Fully navigable scene with Orbit Controls (Drag to rotate, Scroll to zoom).
+- **Realistic Physics**: Real-time simulation of capacitor charging and discharging curves.
+- **AI Assistant**: Integrated Google Gemini AI to answer student queries about the experiment, theory, or procedure.
+- **Virtual Tools**: Stopwatch, Keys, and dynamic wiring visualization.
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Controls
+- **Left Click + Drag**: Rotate view
+- **Scroll**: Zoom in/out
+- **Click Components**: Interact with switches (K1, K2)
