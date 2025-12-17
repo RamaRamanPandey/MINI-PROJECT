@@ -1,22 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
-const getClient = () => {
-  // Safety check for browser environments where process might not be defined
-  const apiKey = (typeof process !== 'undefined' && process.env) ? process.env.API_KEY : null;
-  
-  if (!apiKey) {
-    console.warn("API_KEY not found in environment variables.");
-    return null;
-  }
-  return new GoogleGenAI({ apiKey });
-};
-
 export const askLabAssistant = async (
   prompt: string,
   context: string
 ): Promise<string> => {
-  const ai = getClient();
-  if (!ai) return "AI Assistant Unavailable: Please ensure API_KEY is set in your environment variables.";
+  // Initialize the client with the API key from the environment variable.
+  // The 'define' in vite.config.ts ensures process.env.API_KEY is replaced with the actual key value.
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   try {
     const response = await ai.models.generateContent({
