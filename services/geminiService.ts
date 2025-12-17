@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
 const getClient = () => {
-  const apiKey = process.env.API_KEY;
+  // Safety check for browser environments where process might not be defined
+  const apiKey = (typeof process !== 'undefined' && process.env) ? process.env.API_KEY : null;
+  
   if (!apiKey) {
     console.warn("API_KEY not found in environment variables.");
     return null;
@@ -14,7 +16,7 @@ export const askLabAssistant = async (
   context: string
 ): Promise<string> => {
   const ai = getClient();
-  if (!ai) return "Error: API Key missing. Please configure your environment.";
+  if (!ai) return "AI Assistant Unavailable: Please ensure API_KEY is set in your environment variables.";
 
   try {
     const response = await ai.models.generateContent({
