@@ -12,7 +12,6 @@ The simulation provides a 3D immersive environment where students can:
 ## Features
 - **3D Workspace**: Fully navigable scene with Orbit Controls (Drag to rotate, Scroll to zoom).
 - **Realistic Physics**: Real-time simulation of capacitor charging and discharging curves.
-- **AI Assistant**: Integrated Google Gemini AI to answer student queries about the experiment, theory, or procedure.
 - **Virtual Tools**: Stopwatch, Keys, and dynamic wiring visualization.
 
 ## Controls
