@@ -1,0 +1,5 @@
+{
+  "name": "MINI Simulation",
+  "description": "An interactive Virtual Reality physics laboratory for measuring high resistance using the method of leakage of a condenser. Features realistic circuit simulation, virtual instrumentation, and AI-powered lab assistance.",
+  "requestFramePermissions": []
+}
